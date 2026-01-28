@@ -86,7 +86,13 @@ public class Binary
 		
 	}
 
-	//helper function//
+	/**
+	* Perform pad left for a binary number for n times. For more information, visit <a href="https://www.wikihow.com/Add-Binary-Numbers"> Add-Binary-Numbers </a>.
+	*
+	* @param str binary number in string
+	* @param n number to pad left
+	* @return a binary number in string pad left by n
+	*/
 	private static String padLeft(String str, int n){
 		while(str.length() < n) {
 			str = "0" + str;
@@ -94,14 +100,28 @@ public class Binary
 		return str;
 	}
 
-	private static Binary leftShift(Binary x, int k){
+	/**
+	* Perform left shift for a binary for n times. For more information, visit <a href="https://www.wikihow.com/Add-Binary-Numbers"> Add-Binary-Numbers </a>.
+	*
+	* @param x binary number 
+	* @param n number to left shift
+	* @return a binary number left shifted for n times
+	*/
+	private static Binary leftShift(Binary x, int n){
 		String output = x.number;
-		for(int i = 0; i < k; i++){
+		for(int i = 0; i < n; i++){
 			output += "0";
 		}
 		return new Binary(output);
 	}
 
+	/**
+	* Return the union of two binary numbers. For more information, visit <a href="https://www.wikihow.com/Add-Binary-Numbers"> Add-Binary-Numbers </a>.
+	*
+	* @param num1 first binary number 
+	* @param num2 second binary number 
+	* @return the union of the two numbers
+	*/
 	public static Binary or(Binary num1, Binary num2){
 		String a = num1.number;
 		String b = num2.number;
@@ -121,6 +141,13 @@ public class Binary
 		return new Binary(result);
 	}
 
+	/**
+	* Return the intersection number of two binary numbers. For more information, visit <a href="https://www.wikihow.com/Add-Binary-Numbers"> Add-Binary-Numbers </a>.
+	*
+	* @param num1 first binary number 
+	* @param num2 second binary number 
+	* @return the intersection of the two numbers
+	*/
 	public static Binary and(Binary num1, Binary num2){
 		String a = num1.number;
 		String b = num2.number;
@@ -140,7 +167,13 @@ public class Binary
 		return new Binary(result);
 	}
 
-
+	/**
+	* Return the product of two binary numbers. For more information, visit <a href="https://www.wikihow.com/Add-Binary-Numbers"> Add-Binary-Numbers </a>.
+	*
+	* @param num1 first binary number 
+	* @param num2 second binary number 
+	* @return the product of the two numbers
+	*/
 	public static Binary multiply(Binary num1, Binary num2){
 		String multiplier = num2.number;
 		Binary result = new Binary("0");
