@@ -24,8 +24,8 @@ public class App
         System.out.println( "Second binary number is "+binary2.getValue());
 		Binary sum= Binary.add(binary1,binary2);
 		System.out.println( "Their summation is "+sum.getValue());
-		Binary intersection = Binary.and(binary1, binary2);
 		//new function call//
+		Binary intersection = Binary.and(binary1, binary2);
 		System.out.println("Their intersection is "+ intersection.getValue());
 		Binary union = Binary.or(binary1, binary2);
 		System.out.println("Their union is " + union.getValue());
